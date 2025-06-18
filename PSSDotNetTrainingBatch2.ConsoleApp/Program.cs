@@ -3,11 +3,15 @@ using PSSDotNetTrainingBatch2.ConsoleApp;
 
 Console.WriteLine("Sql Client");
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 //adoDotNetExample.Edit();
-adoDotNetExample.Create();
+//adoDotNetExample.Create();
 //adoDotNetExample.Update();
 //adoDotNetExample.Delete();
+
+DapperExample dapperExample = new DapperExample();
+//dapperExample.Read();
+dapperExample.Edit();
 
 Console.ReadKey();

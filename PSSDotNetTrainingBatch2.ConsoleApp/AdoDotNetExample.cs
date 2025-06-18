@@ -8,7 +8,7 @@ namespace PSSDotNetTrainingBatch2.ConsoleApp
         SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
             DataSource = ".",
-            InitialCatalog = "DotNetTraining",
+            InitialCatalog = "DotNetTrainingBatch2",
             UserID = "sa",
             Password = "sasa@123",
             TrustServerCertificate = true
@@ -31,9 +31,19 @@ namespace PSSDotNetTrainingBatch2.ConsoleApp
             connection.Close();
             Console.WriteLine("Connection successfully closed!");
 
+            List<BlogDto> blogList = new List<BlogDto>();
+
             for (int i = 0; i < dataTable.Rows.Count; i++)
             {
                 DataRow row = dataTable.Rows[i];
+
+                BlogDto blog = new BlogDto();
+                blog.BlogId = Convert.ToInt32(row["BlogId"]);
+                blog.BlogTitle = Convert.ToString(row["BlogTitle"])!;
+                blog.BlogAuthor = Convert.ToString(row["BlogAuthor"])!;
+                blog.BlogContent = Convert.ToString(row["BlogContent"])!;
+                blogList.Add(blog);
+
                 Console.WriteLine("Blog Id => " + row["BlogId"]);
                 Console.WriteLine("Blog Title => " + row["BlogTitle"]);
                 Console.WriteLine("Blog Author => " + row["BlogAuthor"]);
