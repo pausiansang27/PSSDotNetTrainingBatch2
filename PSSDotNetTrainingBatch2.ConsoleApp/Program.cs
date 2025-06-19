@@ -12,6 +12,9 @@ Console.WriteLine("Sql Client");
 
 DapperExample dapperExample = new DapperExample();
 //dapperExample.Read();
-dapperExample.Edit();
+//dapperExample.Edit();
+//dapperExample.Create();
+//dapperExample.Update();
+dapperExample.Delete();
 
 Console.ReadKey();
