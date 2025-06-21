@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PSSDotNetTrainingBatch2.ConsoleApp
+﻿namespace PSSDotNetTrainingBatch2.ConsoleApp
 {
     public class EFCoreExample
     {
@@ -108,6 +101,7 @@ namespace PSSDotNetTrainingBatch2.ConsoleApp
                 if (!isInteger)
                 {
                     Console.WriteLine("Invalid Id. Please enter a valid Id!");
+                    continue;
                 }
                 return blogId;
             }
