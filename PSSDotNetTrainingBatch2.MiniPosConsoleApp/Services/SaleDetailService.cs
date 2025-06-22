@@ -1,6 +1,4 @@
 ﻿using PSSDotNetTrainingBatch2.MiniPosConsoleApp.Models;
-using PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services;
-using System.Globalization;
 
 namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 {
@@ -15,14 +13,14 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 
         public void Edit()
         {
-        FindSaleDetailById:
             Console.WriteLine("Edit SaleDetail by Id \n");
+        FindSaleDetailById:
             AppDbContext db = new AppDbContext();
             int saleDetailId = GetSaleDetailIdFromUser();
             SaleDetail? saleDetail = GetSaleDetailRecordById(saleDetailId, db);
             if (saleDetail is null)
             {
-                Console.WriteLine("SaleDetail record not found for SaleDetail Id: " + saleDetailId);
+                Console.WriteLine("SaleDetail record not found for SaleDetail Id: " + saleDetailId + "\n");
                 goto FindSaleDetailById;
             }
             DisplaySaleDetail(saleDetail);
@@ -53,7 +51,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
         public static void DisplaySaleDetail(SaleDetail saleDetail)
         {
             Console.WriteLine("SaleDetail Id => " + saleDetail.SaleDetailId);
-            Console.WriteLine("SaleDetail Id => " + saleDetail.SaleDetailId);
+            Console.WriteLine("Sale Id => " + saleDetail.SaleDetailId);
             Console.WriteLine("Product Id => " + saleDetail.ProductId);
             Console.WriteLine("Price => " + saleDetail.Price);
             Console.WriteLine("Quantity => " + saleDetail.Quantity + "\n");
@@ -68,7 +66,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 bool isInteger = int.TryParse(input, out int saleDetailId);
                 if (!isInteger)
                 {
-                    Console.WriteLine("Invalid Id. Please enter a valid Id!");
+                    Console.WriteLine("Invalid Id. Please enter a valid Id!\n");
                     continue;
                 }
                 return saleDetailId;
@@ -83,56 +81,10 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 string input = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(input) || !decimal.TryParse(input, out decimal price))
                 {
-                    Console.WriteLine("Please enter a valid price!");
+                    Console.WriteLine("Please enter a valid price!\n");
                     continue;
                 }
                 return price;
-            }
-        }
-
-        public static DateTime GetSaleDateFromUser()
-        {
-            while (true)
-            {
-                Console.Write("Enter Sale Date (MM/DD/YYYY): ");
-                string input = Console.ReadLine()!;
-                bool isDateTime = DateTime.TryParseExact(input, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date);
-                if (string.IsNullOrWhiteSpace(input) || !isDateTime)
-                {
-                    Console.WriteLine("Please enter valid date (MM/DD/YYYY)!");
-                    continue;
-                }
-                return date;
-            }
-        }
-
-        public static string GetVoucherNoFromUser()
-        {
-            while (true)
-            {
-                Console.Write("Enter Voucer No (V-xxxx): ");
-                string voucher = Console.ReadLine()!;
-                if (string.IsNullOrWhiteSpace(voucher))
-                {
-                    Console.WriteLine("Please enter a valid voucher (V-xxxx)!");
-                    continue;
-                }
-                return voucher;
-            }
-        }
-
-        public static decimal GetTotalAmountFromUser()
-        {
-            while (true)
-            {
-                Console.Write("Enter Total Amount: ");
-                string input = Console.ReadLine()!;
-                if (string.IsNullOrWhiteSpace(input) || !decimal.TryParse(input, out decimal totalAmount))
-                {
-                    Console.WriteLine("Please enter a valid amount!");
-                    continue;
-                }
-                return totalAmount;
             }
         }
 

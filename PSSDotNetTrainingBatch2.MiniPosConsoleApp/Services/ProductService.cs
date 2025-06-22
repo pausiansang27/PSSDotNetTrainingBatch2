@@ -20,7 +20,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
             Product? product = GetProductById(productId, db);
             if (product is null)
             {
-                Console.WriteLine("Product not found for Product Id: " + productId);
+                Console.WriteLine("Product not found for Product Id: " + productId + "\n");
                 goto FindProductById;
             }
             DisplayProductDetail(product);
@@ -55,7 +55,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
             Product? product = GetProductById(productId, db);
             if (product is null)
             {
-                Console.WriteLine("Product not found for Product Id: " + productId);
+                Console.WriteLine("Product not found for Product Id: " + productId + "\n");
                 goto FindProductById;
             }
 
@@ -74,14 +74,14 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 
         public void Delete()
         {
-        FindProductById:
             Console.WriteLine("Delete Product by Id \n");
+        FindProductById:
             AppDbContext db = new AppDbContext();
             int productId = GetProductIdFromUser();
             Product? product = GetProductById(productId, db);
             if (product is null)
             {
-                Console.WriteLine("Product not found for Product Id: " + productId);
+                Console.WriteLine("Product not found for Product Id: " + productId + "\n");
                 goto FindProductById;
             }
 
@@ -108,7 +108,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 bool isInteger = int.TryParse(input, out int productId);
                 if (!isInteger)
                 {
-                    Console.WriteLine("Invalid Id. Please enter a valid Id!");
+                    Console.WriteLine("Invalid Id. Please enter a valid Id!\n");
                     continue;
                 }
                 return productId;
@@ -123,7 +123,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 string name = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(name))
                 {
-                    Console.WriteLine("Product name cannot be empty!");
+                    Console.WriteLine("Product name cannot be empty!\n");
                     continue;
                 }
                 return name;
@@ -138,7 +138,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 string input = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(input) || !decimal.TryParse(input, out decimal price))
                 {
-                    Console.WriteLine("Please enter a valid price!");
+                    Console.WriteLine("Please enter a valid price!\n");
                     continue;
                 }
                 return price;
@@ -153,7 +153,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 string input = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(input) || !int.TryParse(input, out int quantity))
                 {
-                    Console.WriteLine("Please enter a valid quantity!");
+                    Console.WriteLine("Please enter a valid quantity!\n");
                     continue;
                 }
                 return quantity;

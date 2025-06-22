@@ -14,14 +14,14 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 
         public void Edit()
         {
-        FindSaleById:
             Console.WriteLine("Edit Sale by Id \n");
+        FindSaleById:
             AppDbContext db = new AppDbContext();
             int saleId = GetSaleIdFromUser();
             Sale? sale = GetSaleRecordById(saleId, db);
             if (sale is null)
             {
-                Console.WriteLine("Sale record not found for Sale Id: " + saleId);
+                Console.WriteLine("Sale record not found for Sale Id: " + saleId + "\n");
                 goto FindSaleById;
             }
             DisplaySaleRecord(sale);
@@ -64,7 +64,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 bool isInteger = int.TryParse(input, out int saleId);
                 if (!isInteger)
                 {
-                    Console.WriteLine("Invalid Id. Please enter a valid Id!");
+                    Console.WriteLine("Invalid Id. Please enter a valid Id!\n");
                     continue;
                 }
                 return saleId;
@@ -80,7 +80,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 bool isDateTime = DateTime.TryParseExact(input, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date);
                 if (string.IsNullOrWhiteSpace(input) || !isDateTime)
                 {
-                    Console.WriteLine("Please enter valid date (MM/DD/YYYY)!");
+                    Console.WriteLine("Please enter valid date (MM/DD/YYYY)!\n");
                     continue;
                 }
                 return date;
@@ -95,7 +95,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 string voucher = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(voucher))
                 {
-                    Console.WriteLine("Please enter a valid voucher (V-xxxx)!");
+                    Console.WriteLine("Please enter a valid voucher (V-xxxx)!\n");
                     continue;
                 }
                 return voucher;
@@ -110,7 +110,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
                 string input = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(input) || !decimal.TryParse(input, out decimal totalAmount))
                 {
-                    Console.WriteLine("Please enter a valid amount!");
+                    Console.WriteLine("Please enter a valid amount!\n");
                     continue;
                 }
                 return totalAmount;
