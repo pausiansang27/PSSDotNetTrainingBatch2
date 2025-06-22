@@ -48,8 +48,8 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 
         public void Update()
         {
-        FindProductById:
             Console.WriteLine("Update Product by Id \n");
+        FindProductById:
             AppDbContext db = new AppDbContext();
             int productId = GetProductIdFromUser();
             Product? product = GetProductById(productId, db);

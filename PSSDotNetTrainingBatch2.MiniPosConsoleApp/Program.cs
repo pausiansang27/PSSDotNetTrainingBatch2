@@ -15,7 +15,7 @@ Console.WriteLine("MINI POS");
 //saleService.Edit();
 //saleService.Create();
 
-SaleDetailService saleDetailService = new SaleDetailService();
+//SaleDetailService saleDetailService = new SaleDetailService();
 //saleDetailService.Read();
-saleDetailService.Edit();
+//saleDetailService.Edit();
 //saleDetailService.Create();
