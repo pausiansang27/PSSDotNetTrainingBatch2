@@ -14,7 +14,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 
         public void Edit()
         {
-        FindProductById:
+        FindSaleById:
             Console.WriteLine("Edit Sale by Id \n");
             AppDbContext db = new AppDbContext();
             int saleId = GetSaleIdFromUser();
@@ -22,7 +22,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
             if (sale is null)
             {
                 Console.WriteLine("Sale record not found for Sale Id: " + saleId);
-                goto FindProductById;
+                goto FindSaleById;
             }
             DisplaySaleRecord(sale);
         }

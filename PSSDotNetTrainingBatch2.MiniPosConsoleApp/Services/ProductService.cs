@@ -31,7 +31,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
             Console.WriteLine("Create Product \n");
             string name = GetProductNameFromUser();
             decimal price = GetProductPriceFromUser();
-            int quantity = GetProductQuantityFromUser();
+            int quantity = GetQuantityFromUser();
 
             Product product = new Product()
             {
@@ -62,7 +62,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
             DisplayProductDetail(product);
             string name = GetProductNameFromUser();
             decimal price = GetProductPriceFromUser();
-            int quantity = GetProductQuantityFromUser();
+            int quantity = GetQuantityFromUser();
 
             product.Name = name;
             product.Price = price;
@@ -145,7 +145,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
             }
         }
 
-        public static int GetProductQuantityFromUser()
+        public static int GetQuantityFromUser()
         {
             while (true)
             {
