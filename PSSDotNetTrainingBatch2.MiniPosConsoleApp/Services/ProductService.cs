@@ -13,8 +13,8 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
 
         public void Edit()
         {
-        FindProductById:
             Console.WriteLine("Edit Product by Id \n");
+        FindProductById:
             AppDbContext db = new AppDbContext();
             int productId = GetProductIdFromUser();
             Product? product = GetProductById(productId, db);
