@@ -149,7 +149,7 @@ namespace PSSDotNetTrainingBatch2.MiniPosConsoleApp.Services
         {
             while (true)
             {
-                Console.Write("Enter Product Quantity: ");
+                Console.Write("Enter Quantity: ");
                 string input = Console.ReadLine()!;
                 if (string.IsNullOrWhiteSpace(input) || !int.TryParse(input, out int quantity))
                 {
