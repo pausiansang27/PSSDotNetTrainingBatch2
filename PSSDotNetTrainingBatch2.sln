@@ -7,6 +7,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.MiniPosConsoleApp", "PSSDotNetTrainingBatch2.MiniPosConsoleApp\PSSDotNetTrainingBatch2.MiniPosConsoleApp.csproj", "{FF2545FC-8F9B-4C5B-AEF8-EEA5851A3F89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Database", "PSSDotNetTrainingBatch2.Database\PSSDotNetTrainingBatch2.Database.csproj", "{694D6CCA-58C1-441D-98ED-7744E3D0FCFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project1", "Project1", "{D9FACB1D-236D-4A0A-A025-8152012A4391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Project1.ConsoleApp", "PSSDotNetTrainingBatch2.Project1.ConsoleApp\PSSDotNetTrainingBatch2.Project1.ConsoleApp.csproj", "{0FE1F014-B868-4247-BB14-6764CAAD7CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Project1.Database", "PSSDotNetTrainingBatch2.Project1.Database\PSSDotNetTrainingBatch2.Project1.Database.csproj", "{C4AC33C0-1208-456C-BB9C-14A6B23A25C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +36,28 @@ Global
 		{FF2545FC-8F9B-4C5B-AEF8-EEA5851A3F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF2545FC-8F9B-4C5B-AEF8-EEA5851A3F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF2545FC-8F9B-4C5B-AEF8-EEA5851A3F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{694D6CCA-58C1-441D-98ED-7744E3D0FCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{694D6CCA-58C1-441D-98ED-7744E3D0FCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{694D6CCA-58C1-441D-98ED-7744E3D0FCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{694D6CCA-58C1-441D-98ED-7744E3D0FCFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE1F014-B868-4247-BB14-6764CAAD7CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE1F014-B868-4247-BB14-6764CAAD7CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE1F014-B868-4247-BB14-6764CAAD7CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE1F014-B868-4247-BB14-6764CAAD7CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AC33C0-1208-456C-BB9C-14A6B23A25C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AC33C0-1208-456C-BB9C-14A6B23A25C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AC33C0-1208-456C-BB9C-14A6B23A25C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AC33C0-1208-456C-BB9C-14A6B23A25C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC3DE495-F128-4B08-9D11-F6A2CF7CFF97} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{FF2545FC-8F9B-4C5B-AEF8-EEA5851A3F89} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{694D6CCA-58C1-441D-98ED-7744E3D0FCFD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0FE1F014-B868-4247-BB14-6764CAAD7CB5} = {D9FACB1D-236D-4A0A-A025-8152012A4391}
+		{C4AC33C0-1208-456C-BB9C-14A6B23A25C0} = {D9FACB1D-236D-4A0A-A025-8152012A4391}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1D4F813-2CF7-4AB1-829D-E778F95985AB}
