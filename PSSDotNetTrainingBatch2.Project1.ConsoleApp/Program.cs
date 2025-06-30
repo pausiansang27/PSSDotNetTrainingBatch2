@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using PSSDotNetTrainingBatch2.Project1.ConsoleApp;
+using PSSDotNetTrainingBatch2.Project1.ConsoleApp.Menus;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Mini POS");
 
-ProductService productService = new ProductService();
-productService.Execute();
+StartMenu startMenu = new StartMenu();
+startMenu.Execute();
+//ProductService productService = new ProductService();
+//productService.Execute();
