@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Project2.ConsoleApp", "PSSDotNetTrainingBatch2.Project2.ConsoleApp\PSSDotNetTrainingBatch2.Project2.ConsoleApp.csproj", "{7017CB71-E93B-41B2-9514-07C1FBAB9628}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSDotNetTrainingBatch2.Project2.Domain", "PSSDotNetTrainingBatch2.Project2.Domain\PSSDotNetTrainingBatch2.Project2.Domain.csproj", "{D26A6318-26BC-4973-9F11-05BE07C32952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{7017CB71-E93B-41B2-9514-07C1FBAB9628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7017CB71-E93B-41B2-9514-07C1FBAB9628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7017CB71-E93B-41B2-9514-07C1FBAB9628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26A6318-26BC-4973-9F11-05BE07C32952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26A6318-26BC-4973-9F11-05BE07C32952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26A6318-26BC-4973-9F11-05BE07C32952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26A6318-26BC-4973-9F11-05BE07C32952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{C4AC33C0-1208-456C-BB9C-14A6B23A25C0} = {D9FACB1D-236D-4A0A-A025-8152012A4391}
 		{9BE6FB33-C3E0-477A-8170-DEDB477D43DF} = {7BEBBA8C-E896-45B5-9E87-3B784AC5202F}
 		{7017CB71-E93B-41B2-9514-07C1FBAB9628} = {7BEBBA8C-E896-45B5-9E87-3B784AC5202F}
+		{D26A6318-26BC-4973-9F11-05BE07C32952} = {7BEBBA8C-E896-45B5-9E87-3B784AC5202F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1D4F813-2CF7-4AB1-829D-E778F95985AB}
