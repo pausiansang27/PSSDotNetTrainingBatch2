@@ -84,6 +84,19 @@ namespace PSSDotNetTrainingBatch2.WinFormsApp1
                 txtMobileNo.Text = item.MobileNo;
                 _editId = id;
             }
+            if (e.ColumnIndex == dgvData.Columns["colDelete"].Index)
+            {
+                var confirm = MessageBox.Show("Are you sure want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.No) return;
+                int id = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells["colId"].Value.ToString()!);
+                var item = _db.TblStaffs.FirstOrDefault(x => x.StaffId == id);
+                if (item is null) return;
+                _db.TblStaffs.Remove(item);
+                int result = _db.SaveChanges();
+                string message = result > 0 ? "Staff deleted successfully!" : "Deleting Staff failed.";
+                MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BindData();
+            }
         }
 
     }

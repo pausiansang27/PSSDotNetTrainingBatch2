@@ -43,6 +43,7 @@
             btnSave = new Button();
             dgvData = new DataGridView();
             colEdit = new DataGridViewButtonColumn();
+            colDelete = new DataGridViewButtonColumn();
             colId = new DataGridViewTextBoxColumn();
             colStaffCode = new DataGridViewTextBoxColumn();
             colStaffName = new DataGridViewTextBoxColumn();
@@ -166,7 +167,7 @@
             dgvData.AllowUserToAddRows = false;
             dgvData.AllowUserToDeleteRows = false;
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new DataGridViewColumn[] { colEdit, colId, colStaffCode, colStaffName, colEmail, colPassword, colPosition, colMobileNo });
+            dgvData.Columns.AddRange(new DataGridViewColumn[] { colEdit, colDelete, colId, colStaffCode, colStaffName, colEmail, colPassword, colPosition, colMobileNo });
             dgvData.Location = new Point(248, 12);
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
@@ -181,6 +182,14 @@
             colEdit.ReadOnly = true;
             colEdit.Text = "Edit";
             colEdit.UseColumnTextForButtonValue = true;
+            // 
+            // colDelete
+            // 
+            colDelete.HeaderText = "Delete";
+            colDelete.Name = "colDelete";
+            colDelete.ReadOnly = true;
+            colDelete.Text = "Delete";
+            colDelete.UseColumnTextForButtonValue = true;
             // 
             // colId
             // 
@@ -277,6 +286,7 @@
         private Button btnSave;
         private DataGridView dgvData;
         private DataGridViewButtonColumn colEdit;
+        private DataGridViewButtonColumn colDelete;
         private DataGridViewTextBoxColumn colId;
         private DataGridViewTextBoxColumn colStaffCode;
         private DataGridViewTextBoxColumn colStaffName;
