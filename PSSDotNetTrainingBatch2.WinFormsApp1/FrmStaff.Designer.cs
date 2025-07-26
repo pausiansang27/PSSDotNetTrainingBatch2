@@ -51,6 +51,7 @@
             colPassword = new DataGridViewTextBoxColumn();
             colPosition = new DataGridViewTextBoxColumn();
             colMobileNo = new DataGridViewTextBoxColumn();
+            btnClear = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -115,6 +116,7 @@
             // 
             txtPassword.Location = new Point(25, 195);
             txtPassword.Name = "txtPassword";
+            txtPassword.ReadOnly = true;
             txtPassword.Size = new Size(181, 23);
             txtPassword.TabIndex = 12;
             // 
@@ -241,11 +243,22 @@
             colMobileNo.Name = "colMobileNo";
             colMobileNo.ReadOnly = true;
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(50, 344);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 23);
+            btnClear.TabIndex = 19;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // FrmStaff
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 397);
+            Controls.Add(btnClear);
             Controls.Add(dgvData);
             Controls.Add(btnSave);
             Controls.Add(txtMobileNo);
@@ -294,5 +307,6 @@
         private DataGridViewTextBoxColumn colPassword;
         private DataGridViewTextBoxColumn colPosition;
         private DataGridViewTextBoxColumn colMobileNo;
+        private Button btnClear;
     }
 }

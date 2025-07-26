@@ -16,5 +16,11 @@ namespace PSSDotNetTrainingBatch2.WinFormsApp1
         {
             InitializeComponent();
         }
+
+        private void staffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmStaff frmStaff = new FrmStaff();
+            frmStaff.ShowDialog();
+        }
     }
 }

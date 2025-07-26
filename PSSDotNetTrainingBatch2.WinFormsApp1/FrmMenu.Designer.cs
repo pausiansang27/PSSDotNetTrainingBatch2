@@ -32,6 +32,7 @@
             setupToolStripMenuItem = new ToolStripMenuItem();
             productToolStripMenuItem = new ToolStripMenuItem();
             saleToolStripMenuItem = new ToolStripMenuItem();
+            staffToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             // setupToolStripMenuItem
             // 
-            setupToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productToolStripMenuItem });
+            setupToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productToolStripMenuItem, staffToolStripMenuItem });
             setupToolStripMenuItem.Name = "setupToolStripMenuItem";
             setupToolStripMenuItem.Size = new Size(49, 20);
             setupToolStripMenuItem.Text = "Setup";
@@ -62,6 +63,13 @@
             saleToolStripMenuItem.Name = "saleToolStripMenuItem";
             saleToolStripMenuItem.Size = new Size(40, 20);
             saleToolStripMenuItem.Text = "Sale";
+            // 
+            // staffToolStripMenuItem
+            // 
+            staffToolStripMenuItem.Name = "staffToolStripMenuItem";
+            staffToolStripMenuItem.Size = new Size(180, 22);
+            staffToolStripMenuItem.Text = "Staff";
+            staffToolStripMenuItem.Click += staffToolStripMenuItem_Click;
             // 
             // FrmMenu
             // 
@@ -85,5 +93,6 @@
         private ToolStripMenuItem setupToolStripMenuItem;
         private ToolStripMenuItem productToolStripMenuItem;
         private ToolStripMenuItem saleToolStripMenuItem;
+        private ToolStripMenuItem staffToolStripMenuItem;
     }
 }
